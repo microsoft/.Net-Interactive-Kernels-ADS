@@ -3,7 +3,7 @@
 ### Launch the notebook using the command palette - 
 `Launch Notebook: Install .Net Interactive Kernels`
 
-![.Net Interactive Kernels](media/PostNotebook.png)
+![.Net Interactive Kernels](images/PostNotebook.png)
 
 Contact @ Vasu Bhog for any questions or concerns.
 
