@@ -1,6 +1,9 @@
-#  .Net Interactive Kernels Install and Use in ADS
+## Install .Net Interactive Kernels and Use it in ADS Notebooks
 
-### Follow the Notebook to properly setup .Net Interactive in ADS.
+### Launch the notebook using the command palette - 
+`Launch Notebook: Install .Net Interactive Kernels`
+
+![.Net Interactive Kernels](content/media/PostNotebook.png)
 
 Contact @ Vasu Bhog for any questions or concerns.
 
