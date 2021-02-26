@@ -1,0 +1,15 @@
+out
+node_modules
+.vscode-test/
+*.vsix
+.vscodeignore
+installTypings.js
+DS_Store
+.DS_Store
+.cache
+npm-debug.log
+yarn.lock
+tslint.json
+tsconfig.json
+package.json
+package-lock.json
