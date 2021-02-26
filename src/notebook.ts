@@ -64,7 +64,7 @@ const getFolderContent = (folderPath: string) => {
 // command palette in Azure Data Studio. If you would like any additional functionality
 // to occur when you launch the book, add to the activate function.
 export function activate(context: vscode.ExtensionContext) {
-    context.subscriptions.push(vscode.commands.registerCommand('launchNotebooks.Install.Net-Interactive-Kernels', () => {
+    context.subscriptions.push(vscode.commands.registerCommand('launchNotebook.Install.Net-Interactive-Kernels', () => {
         let notebooksToDisplay: Array<string> = processNotebooks();
         notebooksToDisplay.forEach(name => {
             azdata.nb.showNotebookDocument(vscode.Uri.file(name));
