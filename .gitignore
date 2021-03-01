@@ -9,7 +9,5 @@ DS_Store
 .cache
 npm-debug.log
 yarn.lock
-tslint.json
-tsconfig.json
 vsc-extension-quickstart.md
 .eslintrc.json
