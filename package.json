@@ -5,7 +5,7 @@
 	"publisher": "vasubhog",
 	"icon": "images/extension.png",
 	"license": "https://raw.githubusercontent.com/Microsoft/azuredatastudio/main/LICENSE.txt",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"preview": true,
 	"repository": {
         "type": "git",

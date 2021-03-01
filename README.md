@@ -8,7 +8,6 @@
 ![Launch Palette](https://raw.githubusercontent.com/VasuBhog/.Net-Interactive-Kernels-ADS/main/images/LaunchCommand.png)
 
 
-
 Contact @ Vasu Bhog for any questions or concerns.
 
 Email: Vasu.Bhog@microsoft.com
