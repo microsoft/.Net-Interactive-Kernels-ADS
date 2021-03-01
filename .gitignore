@@ -11,7 +11,5 @@ npm-debug.log
 yarn.lock
 tslint.json
 tsconfig.json
-package.json
-package-lock.json
 vsc-extension-quickstart.md
 .eslintrc.json
