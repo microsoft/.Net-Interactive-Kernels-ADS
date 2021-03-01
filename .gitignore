@@ -1,5 +1,4 @@
 out
-node_modules
 .vscode-test/
 *.vsix
 .vscodeignore
@@ -8,6 +7,5 @@ DS_Store
 .DS_Store
 .cache
 npm-debug.log
-yarn.lock
 vsc-extension-quickstart.md
 .eslintrc.json
