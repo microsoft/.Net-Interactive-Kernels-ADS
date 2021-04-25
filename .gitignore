@@ -9,3 +9,8 @@ DS_Store
 npm-debug.log
 vsc-extension-quickstart.md
 .eslintrc.json
+node_modules
+.vscode
+package-lock.json
+package.json
+tsconfig.json
