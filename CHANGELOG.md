@@ -1,9 +1,9 @@
 # Change Log
 
-All notable changes to the "dot-net-interactive-kernels" extension will be documented in this file.
+## [0.0.2]
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- Launch the Extension Notebook easily through the command palette as shown in the Readme which will guide you on how to install .Net Interactive Kernels and use them in ADS Notebooks.
 
-## [Unreleased]
+## [0.0.1]
 
-- Initial release
+- This is Notebook helps setup and guides you on how to install .Net Interactive Kernels and use them in ADS Notebooks.

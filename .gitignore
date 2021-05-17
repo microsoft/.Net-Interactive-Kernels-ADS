@@ -1,16 +1,6 @@
 out
-.vscode-test/
 *.vsix
-.vscodeignore
-installTypings.js
-DS_Store
-.DS_Store
-.cache
-npm-debug.log
-vsc-extension-quickstart.md
 .eslintrc.json
 node_modules
 .vscode
-package-lock.json
-package.json
-tsconfig.json
+.DS_Store
