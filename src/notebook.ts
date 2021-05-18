@@ -6,49 +6,20 @@ import * as path from 'path';
 import * as fs from 'fs';
 import * as os from 'os';
 
-// This function looks in the user's default extensions folder for Azure Data Studio
-// to find this extension and its packaged files. If it encounters an error, a
-// message will appear in an error window.
-const processNotebooks = () => {
-    const rootExtensionsFolder = path.normalize(path.join(os.homedir(), '.azuredatastudio', 'extensions'))
-    let notebookNames: Array<string> = [];
-
-    let subExtensionFolder = getFolderContent(rootExtensionsFolder);
-
-    subExtensionFolder.forEach(folderName => {
-        findCorrectFolder(folderName, rootExtensionsFolder, notebookNames);
-    });
-    return notebookNames;
-}
-
-// This function is called by processNotebooks to find the correct folder that contains
-// this extension. If it is found, then it opens up the book in Azure Data Studio's
-// native notebook viewlet.
-const findCorrectFolder = (folderName: string, rootExtensionsFolder: string, notebookNames: Array<string>) => {
-    let folderExt = path.basename(folderName).toLowerCase();
-
-    if (folderExt.indexOf(('vasubhog.dot-net-interactive-kernels').toLowerCase()) > -1) {
-        let fullFolderPath = path.join(rootExtensionsFolder, folderName, 'content');
-        try {
-            extractNotebooksFromFolder(fullFolderPath, notebookNames);
-        } catch (e) {
-            vscode.window.showErrorMessage("Unable to access " + fullFolderPath + ": " + e.message);
-        }
+// This function looks in the user's extensions folder for notebooks to be opened.
+// If it encounters an error, a message will appear in an error window.
+const processNotebooks = (context: vscode.ExtensionContext) => {
+    let notebook = context.extensionPath + '\content\Install-Dot-Net-Kernels.ipynb';
+    try {
+        let notebookNames: Array<string> = [];
+        notebookNames.push(notebook);
+        return notebookNames;
+    } catch (e) {
+        vscode.window.showErrorMessage("Unable to find " + notebook + ": " + e.message);
+        return [];
     }
 }
 
-// Each notebook or markdown file packaged with your extension will be found through this
-// function so that they can be individually opened through the `showNotebookDocument` command.
-const extractNotebooksFromFolder = (fullFolderPath: string, notebookNames: Array<string>) => {
-    const files = getFolderContent(fullFolderPath);
-    files.forEach(fileName => {
-        let fileExtension = path.extname(fileName).toLowerCase();
-        if (fileExtension === '.ipynb' || fileExtension === '.md') {
-            let fullFilePath = path.join(fullFolderPath, fileName)
-            notebookNames.push(path.normalize(fullFilePath));
-        }
-    })
-}
 
 // This is a wrapper to read each subfolder in the extensions folder.
 const getFolderContent = (folderPath: string) => {
@@ -65,7 +36,7 @@ const getFolderContent = (folderPath: string) => {
 // to occur when you launch the book, add to the activate function.
 export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(vscode.commands.registerCommand('launchNotebook.Install.Net-Interactive-Kernels', () => {
-        let notebooksToDisplay: Array<string> = processNotebooks();
+        let notebooksToDisplay: Array<string> = processNotebooks(context);
         notebooksToDisplay.forEach(name => {
             azdata.nb.showNotebookDocument(vscode.Uri.file(name));
         });
