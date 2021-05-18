@@ -2,14 +2,14 @@
 	"name": "dot-net-interactive-kernels",
 	"displayName": ".Net Interactive Kernels",
 	"description": "Install and Use .Net Interactive Kernels in ADS",
-	"publisher": "vasubhog",
+	"publisher": "microsoft",
 	"icon": "content/media/extension.png",
 	"license": "https://raw.githubusercontent.com/Microsoft/azuredatastudio/main/LICENSE.txt",
 	"version": "0.0.3",
 	"preview": true,
 	"repository": {
         "type": "git",
-        "url": "https://github.com/VasuBhog/.Net-Interactive-Kernels-ADS.git"
+        "url": "https://github.com/microsoft/.Net-Interactive-Kernels-ADS.git"
     },
 	"engines": {
 		"vscode": "^1.39.0",
