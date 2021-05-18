@@ -9,7 +9,7 @@ import * as os from 'os';
 // This function looks in the user's extensions folder for notebooks to be opened.
 // If it encounters an error, a message will appear in an error window.
 const processNotebooks = (context: vscode.ExtensionContext) => {
-    let notebook = context.extensionPath + '\content\Install-Dot-Net-Kernels.ipynb';
+    let notebook = context.extensionPath + '/content/Install-Dot-Net-Kernels.ipynb';
     try {
         let notebookNames: Array<string> = [];
         notebookNames.push(notebook);
